@@ -6,9 +6,7 @@
 </head>
 <body>
 <script>
-  true
-  false
-
+/*
   console.log(3 > 5)
   console.log(5 == '5.00') // true
   console.log(5 === '5.00') //false
@@ -28,7 +26,41 @@
   else {
       console.log('You can not drive')
   }
+*/
+// Falsy Values:
+// false 0 '' NaN undefined null
+/*
+  if(0) {
+      console.log('truthy')
+  }
 
+  const cartQuantity = 5;
+
+  if (cartQuantity) {
+      console.log('car has products')
+  }
+
+  console.log('test' / 5) //NaN - not a number
+
+  const variable1 = undefined
+
+ */
+  // Ternary Operator ? :
+  const result = false ? 'truthy': 'falsy';
+  console.log(result)
+
+  // Short-Circuit Evaluation --> && - Guard Operator
+  false && console.log('hellow');
+
+  const message = 5 && 'hello'
+  console.log(message)
+
+  // // Short-Circuit Evaluation --> || - Default Operator
+  const currency = 'EUR' || 'USD' // short circuit
+  console.log(currency)
+
+  const currency1 = undefined || 'USD' // not short circuit
+  console.log(currency1)
 </script>
 </body>
 </html>

@@ -14,20 +14,38 @@
   </button>
 
   <button onclick="
-    cartQuantity++;
-    console.log(`Cart quantity: ${cartQuantity} `)">Add to Cart
+    if (cartQuantity < 10) {
+        cartQuantity += 1;
+        console.log(`Cart quantity: ${cartQuantity} `)
+    }
+    else {
+        console.log('The cart is full!')}">Add to Cart
   </button>
 
   <button
     onclick="
-    cartQuantity += 2;
-    console.log(`Cart quantity: ${cartQuantity} `)">+2
+    if (cartQuantity < 10) {
+        cartQuantity += 2;
+        console.log(`Cart quantity: ${cartQuantity} `)
+    }
+    else if ((cartQuantity += 2) > 10) {
+        console.log('Button is disabled! You can not add more then 10!')
+    }
+    else {
+        console.log('The cart is full!')}">+2
   </button>
 
   <button
     onclick="
-    cartQuantity += 3;
-    console.log(`Cart quantity: ${cartQuantity} `)">+3
+    if (cartQuantity < 10) {
+        cartQuantity += 3;
+        console.log(`Cart quantity: ${cartQuantity} `)
+    }
+    else if ((cartQuantity += 3) > 10) {
+        console.log('Button is disabled! You can not add more then 10!')
+    }
+    else {
+        console.log('The cart is full!')}">+3
   </button>
 
   <button
@@ -42,12 +60,7 @@
   </button>
   <script>
     let cartQuantity = 0;
-    if (cartQuantity <= 0) {
-        cartQuantity = 0
-    }
-    else {
-        false
-    }
+
   </script>
 
 </body>

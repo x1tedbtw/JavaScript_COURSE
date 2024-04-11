@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Functions</title>
+</head>
+<body>
+<script>
+    /*
+  function function1 () {
+      console.log('Darova ya function')
+  }
+
+  function1();*/
+
+    function calculateTax(cost, taxPercent=0.1) {
+        console.log(cost * taxPercent)
+    }
+
+    calculateTax(2000);
+    calculateTax(5000);
+
+    function greet (name) {
+        if (!name) {
+            console.log(`Hello there!`)
+        }
+        else {
+            console.log(`Hello ${name}`)
+        }
+
+    }
+    greet ();
+
+    function convertToFahrenheit(celsius) {
+        fahrenheit = (celsius*9/5) + 32
+        console.log(fahrenheit)
+    }
+    // convertToFahrenheit(25)
+
+    function convertToCelsius(fahrenheit) {
+        celsius = (fahrenheit-32) *5/9
+        console.log(celsius)
+    }
+    // convertToCelsius(86)
+
+    function convertTemperature(degrees, unit) {
+         if (unit === 'C') {
+             convertToFahrenheit(25);
+         }
+         else if (unit === 'F') {
+             convertToCelsius(86);
+         }
+    }
+    convertTemperature(25, 'C')
+    convertTemperature(86, 'F')
+</script>
+</body>
+</html>

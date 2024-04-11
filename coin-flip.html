@@ -6,16 +6,19 @@
 </head>
 <body>
   <script>
-    const randint = Math.random()
-    let result = ''
-    if (randint < 0.5) {
-        result = 'heads'
-        console.log(result)
-    }
-    else {
-        result = 'tails'
-        console.log(result)
-    }
+
+      const randint = Math.random()
+      let result = ''
+      if (randint < 0.5) {
+          result = 'heads'
+          console.log(result)
+      }
+      else {
+          result = 'tails'
+          console.log(result)
+      }
+      let guess = 'heads'
+      guess ? console.log('You win!') : console.log('You lose!');
   </script>
 </body>
 </html>

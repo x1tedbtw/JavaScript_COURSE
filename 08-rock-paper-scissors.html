@@ -24,15 +24,20 @@
 <!--  we dont use var because it doesnt
 really follow the rules of scope(inside of condition statements)-->
 <script>
-    let score = JSON.parse(localStorage.getItem('score'));
+    let score = JSON.parse(localStorage.getItem('score')) || {
+            wins: 0,
+            losses: 0,
+            ties: 0
+        };
 
-    if (score === null) {
+   /* if (!score) {
         score = {
             wins: 0,
             losses: 0,
             ties: 0
         };
     }
+    */
 
     function playGame(playerMove) {
         const computerMove = pickComputerMove();

@@ -55,6 +55,93 @@
         message: 'hello'
     };
     const object2 = object1;
+
+    object1.message = 'Good job!'
+    console.log(object1)
+    console.log(object2)
+
+    const object3 = {
+        message: 'Good job!'
+    };
+    console.log(object1 === object2)
+
+    const object4 = {
+        message: 'Good job!',
+        price: 799
+    };
+    // const message = object4.message;
+    const {message, price} = object4      // distructuring shortcut
+    console.log(message, price);
+
+    const object5 = {
+      // message: message
+      message,                            // shorthand property
+        // method: function function1() {
+        //  console.log('method')
+        // }
+        method() {
+          console.log('method')           // shorthand method
+        }
+    };
+
+    console.log(object5)
+    object5.method();
+
+    const product = {
+        name: 'basketball',
+        price: 2095
+    }
+    console.log(product)
+
+    product.price += 500
+    console.log(product)
+
+    product['delivery-time'] = '3 days';
+    console.log(product)
+
+    const product1 = {
+        name: 'gold',
+        price: 10000
+    }
+    const product2 = {
+        name: 'silver',
+        price: 8000
+    }
+    function comparePrice() {
+
+      if (product1.price > product2.price) {
+        console.log(product1.price)
+      } else {
+          console.log(product1.price)
+      }
+    }
+
+    comparePrice(product1, product2)
+
+    function isSameProduct(product1, product2) {
+        if (product1 === product2) {
+          console.log(true)
+        } else {
+            console.log(false)
+        }
+    }
+
+    isSameProduct(product1, product2)
+
+    function repeatStringNumTimes(str, num) {
+      let repeatedString = "";
+      for (let i = 0; i < num; i++) {
+        repeatedString += str;
+      }
+      return repeatedString;
+    }
+
+console.log(repeatStringNumTimes("abc", 3));
+
+    const string = 'Good Morning!'
+    console.log(string.toLowerCase())
+
+
 </script>
 </body>
 </html>

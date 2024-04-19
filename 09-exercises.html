@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Exercises</title>
+</head>
+<body>
+  <button class="first-btn">9a</button>
+  <button class="second-btn">9b</button>
+
+<p>
+  <button class="heads-btn" onclick="switchButtons()">heads</button>
+  <button class="tails-btn" onclick="switchButtons()">tails</button>
+</p>
+  <p class="clicked-btn"></p>
+
+  <label>
+    <input class="input-line" placeholder="Name" onkeydown="handleSubmitClick(event)">
+    <button class="click" onclick="nameShower()">Submit</button>
+  </label>
+    <p class="js-name-line"></p>
+
+  <script>
+      function handleSubmitClick(event) {
+          if (event.key === '0') {
+              nameShower();
+          }
+          else if (event.key === 'Enter') {
+            nameShower();
+          }
+      }
+    function nameShower() {
+      const inputElement = document.querySelector('.input-line')
+      const inputValue = inputElement.value
+      document.querySelector('.js-name-line').innerHTML = `Your name: ${inputValue}`;
+    }
+    function switchButtons() {
+      const heads = document.querySelector('.heads-btn')
+      const tails = document.querySelector('.tails-btn')
+
+        heads.addEventListener('click', function () {
+          document.querySelector('.clicked-btn')
+              .innerHTML = 'You chose: heads';
+        });
+
+
+        tails.addEventListener('click', function () {
+          document.querySelector('.clicked-btn')
+              .innerHTML = 'You chose: tails';
+        });
+    }
+
+    const buttonA = document.querySelector('.first-button')
+    const buttonB = document.querySelector('.second-btn').innerHTML = '9b done!'
+    console.log(buttonB)
+
+
+  </script>
+</body>
+</html>

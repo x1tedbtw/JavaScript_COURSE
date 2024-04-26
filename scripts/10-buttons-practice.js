@@ -6,13 +6,17 @@ else {
     console.log('No class found :(')
 }
 
-const interactiveButton = document.querySelector('.interactive-btn');
-function buttonToggle() {
-    interactiveButton.addEventListener('click', function() {
-        interactiveButton.classList.toggle('is-toggled')
-    });
+function handleClick() {
+    let interactiveButton = document.querySelector('.interactive-btn');
+    if (interactiveButton.classList.contains("clicked")) {
+        button.classList.add('is-toggled')
+    }
+    else {
+        button.classList.remove('is-toggled')
+    }
 }
 
-buttonToggle();
+
+
 
 

@@ -138,6 +138,7 @@ console.log(numsCount)
   addArrays(array1, array2);
      */
 
+    /*
     const array1 = [1,2,3];
     const array2 = array1.slice();
     array2.push(4);
@@ -183,6 +184,33 @@ console.log(numsCount)
 
     console.log(doubleArray([1, 1, 3]))
     console.log(doubleArray([2, 2, 5, 0, 5]))
+     */
+
+    //11o.
+
+    const arrayStr = ['hellow', 'world', 'search', 'good', 'search'];
+
+    for (let i = 0; i < arrayStr.length; i++) {
+      if (arrayStr[i] === 'search') {
+        // console.log(i);
+        break;
+      } else {
+        // console.log('-1');
+      }
+    }
+
+    function findIndex(array, word) {
+      for (let i = 0; i < array.length; i++) {
+        if (array[i] === word) {
+          return i
+        } else {
+          console.log('-1')
+        }
+      }
+    }
+console.log(findIndex(['green', 'red', 'blue', 'red'], 'red'))
+
+
 
 
 </script>

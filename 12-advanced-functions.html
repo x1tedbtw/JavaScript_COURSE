@@ -45,7 +45,7 @@
         console.log('hello4')
     });
      */
-
+    /*
     setTimeout(function() {      // asynchronous code
         console.log('timeout');
         console.log('timeout2')
@@ -59,6 +59,20 @@
     }, 3000);
 
     console.log('next line 2')
+     */
+
+    [
+        'make dinner',
+        'wash dishes',
+        'watch youtube'
+    ].forEach(function(value, index) {
+        if (value === 'wash dishes') {
+            return;
+        }
+        console.log(index);
+        console.log(value);
+    });
+
 </script>
 </body>
 </html>

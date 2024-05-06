@@ -6,11 +6,39 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Advanced Functions</title>
-  <style></style>
+  <style>
+    .js-button1, .js-button2 {
+      margin-bottom: 10px;
+    }
+
+
+  </style>
 </head>
 <body>
 
+  <button class="js-button1" onclick="changeButton()">Start</button>
+  <button class="js-button2" onclick="changeCartStatus()">Add to Cart</button>
+  <p class="js-push-p"></p>
+
+<p>
+    <button class="button-container" onclick="addMessage()">Add</button>
+    <button class="button-container" onclick="removeMessage()">Remove</button>
+</p>
+
+  <button onclick="" class="js-button">Click</button>
 <script>
+  const buttonElement = document.querySelector('.js-button');
+
+  const eventListener = () => {
+    console.log('click')
+  }
+  buttonElement.addEventListener('click', eventListener);
+
+  buttonElement.removeEventListener('click',eventListener);
+
+  buttonElement.addEventListener('click', () => {
+    console.log('click2')
+  });
     /*
     function greeting() {
         console.log('hellow');
@@ -45,7 +73,7 @@
         console.log('hello4')
     });
      */
-    /*
+/*
     setTimeout(function() {      // asynchronous code
         console.log('timeout');
         console.log('timeout2')
@@ -55,23 +83,109 @@
 
 
     setInterval(function() {
-        console.log('interval')  // will keep running (kinda like loop)
+        // console.log('interval')  // will keep running (kinda like loop)
     }, 3000);
 
-    console.log('next line 2')
-     */
+    // console.log('next line 2')
+
 
     [
         'make dinner',
         'wash dishes',
         'watch youtube'
-    ].forEach(function(value, index) {
+    ].forEach((value, index) => {
         if (value === 'wash dishes') {
             return;
         }
         console.log(index);
         console.log(value);
     });
+
+    const add = function () {
+      console.log(2+3)
+    }
+
+    function runTwice(fun) {
+      console.log(fun);
+      console.log(fun);
+    }
+
+  runTwice(add)
+
+  const button1 = document.querySelector('.js-button1')
+
+
+
+    function changeButton() {
+      button1.innerHTML = 'Loading...';
+      setTimeout(function () {
+        button1.innerHTML = 'Finished!'
+      }, 1000)
+    }
+
+    const pushP = document.querySelector('.js-push-p')
+    function changeCartStatus() {
+      pushP.innerHTML = 'Added'
+      setTimeout(function () {
+        pushP.remove()
+      }, 2000)
+    }
+
+
+    setInterval(function () {
+      const newTitle = document.title = `(${messages}) New messages`
+
+    }, 1000)
+
+    setInterval(function () {
+      const newTitle = document.title = 'Old Title'
+    }, 3000)
+
+  let messages = 2;
+  function addMessage() {
+    messages += 1
+  }
+
+  function removeMessage() {
+    if (messages === 0) {
+      document.title = 'App'
+    }
+    else if (messages > 0){
+      messages -= 1
+    }
+
+
+  }
+
+  const regularFunction = function(param, param2) {
+    console.log('hellow');
+    return 5;
+  }
+  const arrowFunction = (param, param2) => {
+    console.log('hello');
+    return 5;
+  }
+  arrowFunction();
+
+  const oneParam = param => {
+    console.log(param + 1);
+  }
+  oneParam(2);
+
+  const oneLine = () => 2 + 3;
+  console.log(oneLine());
+
+  const object2 = {
+    method: () => {
+
+    },
+    method2() {
+
+    }
+  }
+ */
+
+
 
 </script>
 </body>

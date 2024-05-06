@@ -13,15 +13,21 @@ function renderTodoList() {
             <button onclick="
                 todoList.splice(${index}, 1);
                 renderTodoList();
-            " class="delete-todo-button">Delete</button>
+            " class="delete-todo-button js-delete-todo-button">Delete</button>
         `; // Generating HTML
         todoListHTML += html
     });
 
     document.querySelector('.js-todo-list')
         .innerHTML = todoListHTML;
+
+    console.log(document.querySelectorAll('.js-delete-todo-button'));
 }
 
+document.querySelector('.js-add-todo-button')
+    .addEventListener('click', () => {
+        addTodo();
+    });
 
 
 function addTodo() {

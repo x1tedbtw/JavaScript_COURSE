@@ -120,3 +120,14 @@ const quantityDisplayElement = document.querySelector('.js-quantity-label');
 if (quantityDisplayElement) {
     quantityDisplayElement.innerHTML = storedQuantity;
 }
+
+function updateCartQuantity(cart){
+    let cartQuantity = 0;
+
+    cart.forEach((cartItem) => {
+        cartQuantity += cartItem.quantity;
+    });
+
+    document.querySelector('.js-checkout-items')
+        .innerHTML = cartQuantity;
+};

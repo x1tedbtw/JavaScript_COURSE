@@ -2,8 +2,6 @@
 Welcome to my JavaScript Course repository! 
 This README will guide you through the basics of JavaScript that I learned during the course and the mini projects I created along the way. 
 The projects include a Calculator, Coin-Flip game, ToDo list, and Rock Paper Scissors game. Let's dive in!
-Mini Projects
-Here are the mini projects I created to practice my JavaScript skills:
 
 ## Mini Projects
 Here are the mini projects I created to practice my JavaScript skills:
